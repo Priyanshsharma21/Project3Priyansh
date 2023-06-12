@@ -29,15 +29,6 @@ const internSchema = new Schema({
         type: Number,
         required: true,
         unique: true,
-        validate: {
-            validator: function (value) {
-              const mobileNumber = value.toString();
-              // Regular expression pattern for a valid mobile number
-              const mobilePattern = /^\d{10}$/;
-              return mobilePattern.test(mobileNumber);
-            },
-            message: 'Please enter a valid mobile number',
-          },
     },
     collegeId: {
         type: Schema.Types.ObjectId,

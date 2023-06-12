@@ -10,7 +10,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 
 
-
 // routing middlewares
 app.use('/',router)
 

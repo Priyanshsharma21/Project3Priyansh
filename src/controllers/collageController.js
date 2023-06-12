@@ -116,7 +116,7 @@ export const getCollage = async (req, res) => {
 
         const collage = await Collage.findOne(query)
 
-        if (!collage) return res.status(400).json({
+        if (!collage) return res.status(404).json({
             status: false,
             message: "No Collage Found"
         })
