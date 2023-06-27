@@ -22,9 +22,7 @@ export const isValidReqBody = (value)=>{
 export const isValidPhoneNumber = (phoneNumber) => {
     const phoneNumberString = phoneNumber.toString();
   
-    // Remove any non-digit characters from the phone number string
     const cleanPhoneNumber = phoneNumberString.replace(/\D/g, '');
   
-    // Check if the sanitized phone number is a valid mobile number
     return /^(?:\+?\d{1,3}[-\s]?)?\d{10}$/.test(cleanPhoneNumber);
-  };
+};

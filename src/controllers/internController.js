@@ -9,9 +9,10 @@ import {
 } from '../utils/index.js'
 
 
+
 export const postIntern = async(req,res)=>{
     try {
-        const  { name, mobile, email, collegeId} = req.body
+        const  { name, mobile, email, collegeId } = req.body
 
         if (!isValidReqBody(req.body)) {
             return res.status(400).json({
@@ -72,3 +73,5 @@ export const postIntern = async(req,res)=>{
         res.status(500).json({status: false, message: error.message })
     }
 }
+
+
